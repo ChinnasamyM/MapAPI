@@ -59,7 +59,7 @@
         function initialize() {
             var mapOptions = {
                 center: new google.maps.LatLng(6.9167, 79.8473),
-                zoom: 10,
+                zoom: 5,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             var map = new google.maps.Map(document.getElementById("map_canvas"),
@@ -69,7 +69,7 @@
             var marker = new google.maps.Marker({
                 position: latlng,
                 map: map,
-                title: 'My Place'
+                title: 'Resulting Place'
             });
         }
         
@@ -101,15 +101,45 @@
                 }  
             });  
         }  
-       // Call this function with giving the address.  
-        codeAddress('Chennai');
+       
 
        function GetMapAddress()
         {
             var addresstxt = document.getElementById('txtAddress').value;
             codeAddress(addresstxt);
+            codeAddressgeo(addresstxt);
         }
 
+       navigator.geolocation.getCurrentPosition(GetLocation);
+       function GetLocation(location) {
+           alert(location.coords.latitude);
+           alert(location.coords.longitude);
+           alert(location.coords.accuracy);
+       }
+      
+       function codeAddressgeo(AdrressfromParam) {
+          // debugger;
+           var address = AdrressfromParam;// document.getElementById('address').value;
+           geocoder.geocode({ 'address': address }, function (results, status) {
+               if (status == google.maps.GeocoderStatus.OK) {
+                  // debugger;
+                   var rsd = results;
+                   var geocodelat = results[0].geometry.location.A.toString();
+                   var geocodelon = results[0].geometry.location.k.toString();
+                   document.getElementById('txtlat').value = geocodelat;
+                   document.getElementById('txtlon').value = geocodelon;
+                   //alert(geocodeloc);
+                   //alert(geocodelocz);
+                   
+               } else {
+                   alert('Geocode was not successful for the following reason: ' + status);
+               }
+           });
+       }
+       //var results = Geocoder.geocode('Chennai')
+       //alert(results[0].longitude);
+       //alert(results[0].latitude);
+       //document.getElementsByClassName('gmnoprint').Style.Visibility = 'hidden';
  </script>  
 
 
