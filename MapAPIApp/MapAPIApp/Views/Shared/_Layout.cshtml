@@ -83,7 +83,7 @@
             geocoder.geocode({ 'address': address }, function (results, status) {  
                 if (status == google.maps.GeocoderStatus.OK) {  
                     var myOptions = {  
-                        zoom: 17,  
+                        zoom: 5,  
                         center: results[0].geometry.location,  
                         mapTypeId: google.maps.MapTypeId.ROADMAP  
                     }  
@@ -112,9 +112,9 @@
 
        navigator.geolocation.getCurrentPosition(GetLocation);
        function GetLocation(location) {
-           alert(location.coords.latitude);
-           alert(location.coords.longitude);
-           alert(location.coords.accuracy);
+           document.getElementById('txtlat').value = location.coords.latitude;
+           document.getElementById('txtlon').value = location.coords.longitude;
+           //alert(location.coords.accuracy);
        }
       
        function codeAddressgeo(AdrressfromParam) {
