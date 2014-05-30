@@ -38,6 +38,10 @@ namespace MapAPIApp
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+            
+            // For Map search API Script bundles section
+            bundles.Add(new ScriptBundle("~/MapAPIbundles").Include("~/ViewModel/MapAPI*"));
+
         }
     }
 }
