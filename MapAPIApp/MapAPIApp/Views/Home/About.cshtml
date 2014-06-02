@@ -1,34 +1,26 @@
-﻿@{
-    ViewBag.Title = "About";
-}
+﻿
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+@{  
+   ViewBag.Title = "Google Map API V3 for Calculating distance with MVC4 Razor";  
+ }  
+ <h3>Google Map API V3 for Calculating distance with MVC4 Razor</h3> 
+<br />
+<p>
+        <input type="text" name="address1" value="Address 1" class="address_input" size="40" />
+        <input type="text" name="address2" value="Address 2" class="address_input" size="40" />
+        <input type="submit" name="find" value="Search" onclick="showLocation(); return false;"/>
+      </p>
 
-<article>
-    <p>
-        Use this area to provide additional information.
-    </p>
+<div style="float:right;width:200px;">
+    <label id="lbltitlelan">Latitude : </label> &nbsp; <input type="text" style="width:50px;" id="txtlat" />&nbsp;<label id="lbltitlelon">Longitude :</label> &nbsp; <input type="text" style="width:50px;" id="txtlon" />
+</div>
+ <br />  
+<div style="width:100%;">
+    <div id="map_canvas" style="width: 640px; height: 480px;">       
+    </div>
+   
+ </div>  
+<div id="results"></div>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
-</article>
 
-<aside>
-    <h3>Aside Title</h3>
-    <p>
-        Use this area to provide additional information.
-    </p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-</aside>
