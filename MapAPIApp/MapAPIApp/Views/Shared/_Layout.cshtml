@@ -2,17 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>@ViewBag.Title - Distance Calculation App</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         <!-- 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=[Your Key]&sensor=false"></script>  
-           
-        -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=[Your Key]&sensor=false"></script>           
+        -->               
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        
-         <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=3&key=ABQIAAAA7j_Q-rshuWkc8HyFI4V2HxQYPm-xtd00hTQOC0OXpAMO40FHAxT29dNBGfxqMPq5zwdeiDSHEPL89A"></script>
-        
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
@@ -20,19 +16,12 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title" >
+                        <img src="~/Images/NTTAMSTitleLogo.png" alt="Logo loading..." />
+                    </p>
                 </div>
                 <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
+                    
                 </div>
             </div>
         </header>
@@ -45,7 +34,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p>&copy; @DateTime.Now.Year - Distance Calculation ..</p>
                 </div>
             </div>
         </footer>

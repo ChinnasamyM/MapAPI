@@ -1,14 +1,23 @@
 ﻿
 
  @{  
-   ViewBag.Title = "Google Map API V3 with MVC4 Razor";  
+     ViewBag.Title = "Distance Calculation using Google Map API V3 with MVC4 Razor";  
  }  
- <h3>Google Maps Demo using MVC 4</h3> 
+ <h3>Distance Calculation using Google Map API V3 with MVC4 Razor</h3> 
 <br />
-<input type="text" id="txtAddress" value="Chennai" /> &nbsp;&nbsp;
+Address 1: <input type="text" id="txtAddress"  value="Chennai" /> &nbsp;&nbsp; Address 2: <input type="text" id="txtAddress2" value="Bangalore" /> &nbsp;&nbsp;
 <input type="button" id="btnsearchMap" value="Go" onclick="GetMapAddress();"/> 
 <div style="float:right;width:200px;">
-    <label id="lbltitlelan">Latitude : </label> &nbsp; <input type="text" style="width:50px;" id="txtlat" />&nbsp;<label id="lbltitlelon">Longitude :</label> &nbsp; <input type="text" style="width:50px;" id="txtlon" />
+    For First Address:
+    <br />
+    <label id="lbltitlelan">Latitude : </label> &nbsp; <input type="text" style="width:150px;" id="txtlat" />&nbsp;<label id="lbltitlelon">Longitude :</label> &nbsp; <input type="text" style="width:150px;" id="txtlon" />
+    <br />
+    <br />
+    For Second Address :
+    <br />
+    <label id="lbltitlelan2">Latitude : </label> &nbsp; <input type="text" style="width:150px;" id="txtlat2" />&nbsp;<label id="lbltitlelon2">Longitude :</label> &nbsp; <input type="text" style="width:150px;" id="txtlon2" />
+
+    <div id="results"></div>
 </div>
  <br />  
 <div style="width:100%;">
